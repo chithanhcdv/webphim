@@ -1,0 +1,124 @@
+/** light mode **/
+body.light {
+    background-color: #f0f8ff;
+    color: #000;
+}
+
+body.light .main{
+    background: #fff;
+}
+
+body.light .breadcrumb-item a{
+    color: #000;
+}
+
+body.light .breadcrumb-item{
+    color: #000;
+}
+
+body.light .breadcrumb-item:hover{
+    opacity: 50%;
+}
+
+body.light .breadcrumb-item+.breadcrumb-item::before {
+    color: #000; 
+}
+
+body.light .breadcrumb-item.active {
+    color: rgb(124, 124, 124); 
+}
+
+body.light aside .movies-list{
+    background: #f2f8f8;
+    color: #000;
+}
+
+body.light .text-ranking span{
+    color: #000;
+}
+
+body.light aside .see-all:hover{
+    color: red;
+}
+
+body.light .play-icon{
+    color: #fff;
+}
+
+body.light .movies-list a{
+    color: #000;
+}
+
+body.light .movies-list h2{
+    color: #fff;
+}
+
+body.light .movies-list li{
+    box-shadow: #585454;
+}
+
+body.light .see-more-button a{
+    color: #fff;
+}
+
+body.light .movies-filter{
+    background: #000;
+    color: #fff;
+}
+
+body.light .movies-filter:hover{
+    color: #c0d5dd;
+    transition: color 0.3s ease-in-out;
+}
+
+body.light .filter-form{
+    background: #585454;
+}
+
+body.light .tab-detail .nav-link{
+    color: #000;
+}
+
+body.light .movie-information {
+    background-color: #0f1416;
+    color: #fff;
+}
+
+body.light #movie-information-tab span{
+    color: #000;
+}
+
+body.light .tab-detail p{
+    color: #000;
+}
+
+body.light .movies-ranking ul {
+    background: #f0f8ff;
+}
+
+body.light #ranking .movies-list-text span {
+    color: #000;
+}
+
+body.light #news-show a{
+    color: black;
+}
+
+body.light #news-show a:hover{
+    color: red;
+}
+
+/* swiper */
+body.light .related-movies {
+    background: #f2f8f8;
+    color: #000;
+}
+
+/* footer */
+body.light footer{
+    color: #000;
+}
+
+body.light footer a{
+    color: #000;
+}

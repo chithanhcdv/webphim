@@ -1,0 +1,1008 @@
+/* CSS cho riêng các phần tử **/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/** scroll bar **/
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f1416;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{ 
+    /*background: linear-gradient(#642bbf, #ff22e6);*/
+    background: linear-gradient(#dc0c24, #77291f);
+    border-radius: 10px;
+}
+
+/** Body **/
+body{
+    background-color: #263238;
+    color: #fff;
+    font-family: "Alata", sans-serif;
+}
+
+/** Header **/
+header{ 
+    background-color: #0f1416;
+}
+
+/* CSS cho thanh tìm kiếm */
+#search{
+    margin-right: 20px;
+}
+
+#search-bar input, #search-bar button {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #263238;
+    border-radius: 3px;
+    transition: color 0.5s ease, border-color 0.5s ease;
+}
+
+#search-bar input{
+    border-right: none;
+}
+
+#search-bar button{
+    border-left: none;
+    color: rgb(148, 148, 148);
+    transition: color 0.5s ease;
+}
+
+/* Placeholder của thanh tìm kiếm */
+#search-bar input::placeholder{
+    color: rgb(148, 148, 148) ;
+    transition: color 0.5s ease;
+}
+
+/* Thanh tìm kiếm khi được focus (nhấn vào) */
+#search-bar input:focus {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    outline: none; /* Bỏ outline mặc định của trình duyệt */
+    box-shadow: none; /* Bỏ hiệu ứng shadow mặc định của Bootstrap */
+    border-color: rgb(56, 55, 55); /* Màu viền khi focus */
+}
+
+#search-bar input:focus::placeholder {
+    color: white;
+}
+
+#search-bar button:focus, #search-bar input:focus + button {
+    border-color: rgb(56, 55, 55); /* Màu viền khi focus */
+    color: white; /* Màu của icon trong button khi focus */
+}
+
+/* Hiển thị kết quả dưới thanh tìm kiếm */
+#search-results .list-group-item {
+    width: 100%;
+}
+
+/* Hiển thị dropdown khi hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* CSS cho dropdown */
+.dropdown-menu{
+    border-top: 2px solid red;
+}
+
+.navbar-nav .dropdown-menu { 
+    width: 400px;
+    column-count: 3;
+    column-gap: 1rem;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+
+.navbar-nav .dropdown-item {
+    color: #333;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .dropdown-item:hover {
+    color: red;
+    background-color: inherit;
+}
+
+.navbar-nav .nav-item .dropdown-toggle::after {
+    color: red;
+}
+
+/** CSS cho nút trang chủ **/
+#home-page{
+    color: #fff;
+}
+
+#home-page:hover{
+    color: red;
+}
+
+.menu .active {
+    position: relative;
+    width: max-content;
+}
+
+.menu .active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    width: 80%;
+    height: 2px;
+}
+
+/* css cho nút đăng nhập */
+.header-login-button a{
+    color: #fff;
+    transition: color 0.3s linear;
+}
+
+.header-login-button a:hover{
+    color: red;
+}
+
+
+/***** Phần main *****/
+
+/* background */
+.main{
+    background-color:#0f1416 ;
+    border-radius: 3px;
+    padding: 1rem;
+}
+
+/* Carousel */
+.carousel-item img{
+    border-radius: 2px;
+    height: 470px;
+    object-fit:cover;
+}
+
+.carousel-caption{
+    background: rgb(0,0,0,.7);
+    z-index: 2;
+}
+
+.carousel .play-icon {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px; 
+    padding-left:28px;
+    border-radius: 50%; 
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.carousel .play-icon{
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+/* Hiển thị nút play khi hover vào một phim */
+.carousel a:hover .play-icon{
+    opacity: 1;
+}
+
+/* Hiệu ứng khi hiển thị nút play */
+.carousel a{
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel a:hover {
+    opacity: .7;   
+}
+
+.item img{
+    height: 290px;
+}
+
+.carousel-caption {
+    position: absolute;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    color: #fff;
+    z-index: 2;
+    max-width: 80%; 
+    text-align: left; 
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Điều chỉnh tiêu đề và mô tả phim */
+.carousel-caption h4 {
+    font-size: 24px; 
+    font-weight: bold; 
+}
+
+.carousel-caption p {
+    font-size: 16px;
+    margin-bottom: 0;
+    opacity: 0.7; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/** Trang chủ **/
+/* Phim mới cập nhật */
+#new-update h3{
+    background: linear-gradient(to right,#dc0c24 -50%, #77291f);
+    border-radius:6px;
+    padding: 8px;
+    text-transform:uppercase;
+    font-weight:500;
+    font-size:18px;
+    color: #eeeeee;
+    margin-bottom:20px;
+    margin-top:30px;
+    text-align:center;
+    width: 100%;
+}
+
+/* Bảng xếp hạng phim */
+#ranking h3{  
+    background: linear-gradient(to right,#dc0c24 -50%, #77291f);
+    border-radius:6px;
+    padding: 8px;
+    text-transform:uppercase;
+    font-weight:500;
+    font-size:18px;
+    color: #eeeeee;
+    width: max-content;
+}
+
+#ranking .nav-tabs{
+    border-bottom: none;
+}
+
+#ranking .nav-tabs .nav-link.active{
+    color: rgb(205, 17, 55);
+    background: none;
+}
+
+#ranking .nav-tabs .nav-link:hover{
+    color: rgb(205, 17, 55);
+    opacity: 1;
+}
+
+#ranking .ranking-number{
+    border-radius: 50%;
+    font-size: 13px;
+    background: rgb(47, 37, 37);
+    left: 5px;
+    top: 5px;
+}
+/*
+background:linear-gradient(81.43deg,#b71c1c -26.81%,#8e1438);
+background: linear-gradient(45deg, #ff0000, #333333, 45deg);
+background: linear-gradient(#93291e, #ed213a, );
+*/
+
+
+/** Breadcrumbs **/
+.breadcrumb a {
+    color: white;
+}
+
+.breadcrumb a:hover {
+    color: #acacac;
+}
+
+
+.breadcrumb li{
+    color: white;
+}
+
+/* Màu trắng cho dấu / */
+.breadcrumb-item+.breadcrumb-item::before {
+    color: white; 
+}
+
+.breadcrumb-item.active{
+    color: #acacac;
+}
+
+
+/** Pagination **/
+.pagination .page-item {
+    margin: 0 5px;
+}
+
+.pagination .page-item .page-link {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #d32f2f;
+    color: white;
+    border-color: #d32f2f;
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: #555;
+    color: #bbb;
+}
+/*******************/
+
+
+/*** Show.blade ***/
+/* Title phim */
+.movie-text h3{
+    /*color:#FF033E;*/
+    color: #b5e745;
+}
+
+.rating-text span{
+    font-size: 15px;
+}
+
+/* Mô tả phim */
+.movie-description{
+    overflow: auto;
+    height: 200px;
+    opacity: .8;
+    line-height:25px;
+}
+
+/* Hình ảnh phim */
+.movie-image {
+    height: 380px; /* Đặt chiều cao cố định cho khung chứa trên desktop */
+}
+
+.movie-image img{
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .movie-image {
+        height: auto; /* Khi màn hình nhỏ, chiều cao sẽ tự động theo kích thước ảnh */
+    }
+}
+
+/* Nút theo dõi phim */
+.watchList-button{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.watchList-button button{
+    color: #fff;
+    font-size: 12px;
+    background: rgb(39, 34, 34);
+    transition: transform 0.5s;
+}
+
+.watchList-button button:hover{
+    color: #fff;
+    font-size: 12px;
+    background: rgb(0, 0, 0);
+    transform: scale(1.05);
+}
+
+.watchList-button i{
+    color: crimson;
+}
+
+/* Tab nav */
+.nav-tabs .nav-link {
+    color: #fff;
+    margin-right: 5px;
+    border: none;
+    transition: opacity 0.3s linear;
+}
+
+.nav-tabs .nav-link:hover {
+    opacity: .7;
+}
+
+.nav-tabs .nav-link.active {
+    background: #8cc70e;
+    color: #fff;
+}
+
+.tab-content p{
+    color: #fff;
+    font-size: 15px;
+}
+
+.tab-content span{
+    color: #fff;
+    font-size: 14px;
+}
+
+i{
+    margin-right: 5px;
+}
+
+.tab-content a{
+    color: #b5e745;
+}
+
+#information-tab p a:first-child {
+    margin-left: 0.25rem;
+}
+
+#information-tab span{
+    margin-left: 0.25rem;
+    opacity: .7;
+}
+
+/** Phần bình luận **/
+.comment-page{
+    background: #fff;
+    color: #000;
+}
+
+.comment-page textarea {
+    resize: none; 
+}
+
+.list-comment i{
+    padding: 10px 3px;
+}
+
+.list-comment h4{
+    color: #385898;
+}
+
+.list-comment .reply-form{
+    margin-left: 50px;
+    padding-left: 7px;
+}
+
+.list-comment .list-replies{
+    margin-left: 50px;
+    padding-left: 7px;
+    border-left: 1px solid #c8dce4;
+}
+
+/** Nút Play phim **/
+.play-icon {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px; 
+    padding-left:25px;
+    border-radius: 50%; 
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+/* Hiệu ứng khi hover vào hình ảnh */
+.movie-image img{
+    /*transition: opacity 0.3s linear;*/
+    transition: filter 0.3s linear;
+}
+
+.movie-image:hover img{
+    /*opacity: 0.5;*/
+    filter: brightness(0.5);
+}
+
+/*** Watch.blade ***/
+#server-select h5{
+    color:rgba(116, 205, 183, 0.568);
+}
+
+#episode-select h6{
+    color:rgba(67, 177, 150, 0.568);
+}
+
+#episode-select a{
+    width: 40px;
+}
+
+#episode-select a:hover{
+    background-color: rgb(213, 74, 74);
+    border: rgb(213, 74, 74);
+}
+
+#episode-select a.active {
+    background-color: red; /* Màu nền đỏ cho liên kết đang active */
+    border: red;
+}
+
+
+/*** Movies List ***/
+.movies-list h2{
+    background: linear-gradient(to right,#dc0c24 -50%, #77291f);
+    border-radius:6px;
+    padding: 10px 15px;
+    text-transform:uppercase;
+    font-weight:500;
+    font-size:18px;
+    width: max-content;
+    max-width: 100%;
+}
+
+.movies-list h3{
+    font-size:18px;
+}
+
+#not-movie {
+    background: linear-gradient(to right,#dc0c24 -50%, #77291f);
+    border-radius:6px;
+    padding: 10px 15px;
+    text-transform:uppercase;
+    font-weight:500;
+    font-size:18px;
+    width: max-content;
+}
+
+.movies-list .episode-number{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #bd0909;
+    border-radius: 50%;
+    padding: 10px 16px;
+    color: #fff;
+    font-size: 12px;
+    line-height:15px;
+    text-transform: uppercase;
+}
+
+.movies-list .episode-number span{
+    display: block;
+    font-size: 14px;
+}
+
+.movies-list .episode-full{
+    padding: 10px 12px;
+}
+    
+.movies-list .movies-list-text span{
+    font-size: 15px;
+    opacity: .5;
+}
+
+/* Ẩn nút play ở phim */
+.movies-list .play-icon{
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    color: #fff;
+}
+
+/* Hiển thị nút play khi hover vào một phim */
+.movies-list li:hover .play-icon{
+    opacity: 1;
+}
+
+/* Hiệu ứng khi hiển thị nút play */
+.movies-list li{
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.movies-list li:hover {
+    opacity: .7;   
+}
+
+/* Hiệu ứng phóng to hình ảnh khi hover vào item */
+.movies-list .position-relative {
+    overflow: hidden; /* ẩn phần hình ảnh bị phóng to ra khỏi khung */
+    border-radius: 0.25rem;
+}
+
+.movies-list li img {
+    transition: transform 0.3s ease-in-out; /* Thêm transition cho cả trạng thái ban đầu */
+}
+
+.movies-list li:hover img {
+    transform: scale(1.1);
+}
+
+
+/*** aside ***/
+aside section{
+    background-color: #181a1f;
+}
+
+aside .play-icon{
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 9px; 
+    padding-left:15px;
+    border-radius: 50%; 
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+aside a{
+    color: #fff;
+    transition: color 0.5s linear;
+}
+
+.see-more-button a:hover{
+    transform: scale(105%);
+    transition: transform 0.3s ease-in-out;
+}
+
+aside .see-all:hover{
+    color: red;
+}
+
+aside hr{
+    color: rgb(108, 81, 81);
+}
+
+aside .ranking-number{
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 15px;
+    font-size: 12px;
+    background: linear-gradient(to right,#dc0c24 -50%, #77291f);
+}
+
+aside #aside-new-update span{
+    font-size: 14px;
+}
+
+aside .text-ranking p{
+    font-size: inherit;
+}
+
+aside img{
+    width: 85px;
+    height: 120px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* nút xem thêm */
+.see-more-button a{
+    background: linear-gradient(to right,#dc0c24 -50%, #77291f);
+    color: #fff;
+}
+
+
+/* movies-ranking */
+.movies-ranking ul{
+    background: #181a1f;
+}
+
+.movies-ranking .ranking-number{
+    font-size: 12px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 3px;
+    background: linear-gradient(to right,#dc0c24 -50%, #77291f);
+}
+
+.movies-ranking .big-play-icon{
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 15px; 
+    padding-left:21px;
+    border-radius: 50%; 
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.movies-ranking .small-play-icon{
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 9px; 
+    padding-left:15px;
+    border-radius: 50%; 
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.movies-ranking .text-ranking{
+    line-height: 15px;
+    margin-top: 10px;
+}
+
+.movies-ranking .text-ranking span{
+    opacity: .5;
+}
+
+/*** Form xác thực như đăng nhập, đăng ký, quên mật khẩu, đổi mật khẩu ***/
+.auth-form{
+    background: linear-gradient(to left, #4f4444, #1a1c2c); 
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.auth-form h3{
+    color: #fff;
+}
+
+/* Nút đăng nhập */
+.auth-form .auth-button button {
+    background: #00d2ff;
+    transition: background-color 0.5s, color 0.5s ease;
+}
+
+.auth-form .auth-button button:hover {
+    background-color:  #1e90ff;
+    color: #fff;
+}
+
+/* Liên kết */
+.auth-form .link a{
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.auth-form .link a:hover {
+    color: #00d2ff;
+    text-decoration: underline;
+}
+
+/* đăng nhập bằng gg và fb */
+#provider-login-button a{
+    border-radius: 50%;
+    padding: 10px 11px;
+}
+
+#provider-login-button i{
+    padding-left: 5px;
+}
+/*** Hết form liên quan đến xác thực ***/
+
+
+/*** Lọc phim ***/
+.movies-filter{
+    height:2.75rem;
+    background: #fff;
+}
+
+.movies-filter:hover{
+    color: #808080;
+    background: #fff;
+}
+
+.filter-form h3{
+    color: #8cc70e;
+    font-size: 18px;
+}
+
+.filter-form .form-check{
+    font-size:15px;
+}
+
+.filter-form .filter-button button{
+    background: #8cc70e;
+    color: #fff;
+    transition: background-color 0.5s;
+}
+
+.filter-form .filter-button button:hover{
+    background-color: #628510;
+}
+
+.filter-form .form-check{
+    background: linear-gradient(to left, #dcd8d8, #a4a5ab); 
+}
+
+.filter-form {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden; /* Ẩn nội dung khi không cần thiết */
+    transition: opacity 1s ease, max-height 1s ease;
+}
+
+.filter-form.active {
+    opacity: 1;
+    max-height: 1500px; /* Giá trị lớn hơn để đảm bảo nội dung hiển thị */
+    margin-bottom: 20px;
+}
+
+/*** Thông tin người dùng (user profile) ***/
+#user-profile {
+    background: #292727;
+    border-radius: 5px;
+    padding: 40px;
+}
+
+#user-profile .card{
+    background: rgb(245, 243, 243);
+}
+
+#user-profile .card-body{
+    border-radius: 15px;
+    margin: 0 25px;
+    margin-bottom: 10px;
+    background: white;
+}
+
+#user-profile img{
+    border: 4px solid #fff;
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+#user-profile #profile-update-button a{
+    border: 0;
+    background-color: rgb(95, 153, 177);
+    width: 85%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#user-profile #profile-update-button a:hover{
+    background-color: rgb(102, 175, 204);
+}
+
+/*** User-profile-update ***/
+#user-profile-update #user-profile-image img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 50px;
+}
+
+#user-profile-update #user-profile-image {
+    border-right: 1px solid rgb(245, 240, 240);
+}
+
+#user-profile-update button {
+    background-color: rgb(95, 153, 177);
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#user-profile-update button:hover {
+    background-color: rgb(102, 175, 204);
+}
+
+/* Tin phim */
+#news h3{
+    background: linear-gradient(to right,#dc0c24 -50%, #77291f);
+    border-radius:6px;
+    padding: 8px;
+    text-transform:uppercase;
+    font-weight:500;
+    font-size:18px;
+    color: #eeeeee;
+    width: max-content;
+}
+
+.news-list h2{
+    background: linear-gradient(to right,#dc0c24 -50%, #77291f);
+    border-radius:6px;
+    padding: 10px 15px;
+    text-transform:uppercase;
+    font-weight:500;
+    font-size:18px;
+    width: max-content;
+    max-width: 100%;
+}
+
+#news-show a:hover{
+    color: red;
+    transition: color 0.3s ease-in-out;
+}
+
+#news-show p{
+    text-align:justify;
+}
+
+/** Các phim liên quan (swiper)**/
+.related-movies {
+    background-color: #181a1f;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 14px;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.image-wrapper img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 210px;
+    display: block;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.1);
+    opacity: .7;
+}
+
+.image-wrapper .play-icon {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-wrapper:hover .play-icon {
+    opacity: 1;
+}
+
+.image-wrapper .movie-title {
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .65) 100%);
+    width: 100%;
+    color: white;
+    opacity: 1;  /* Mặc định hiển thị */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-wrapper:hover .movie-title {
+    opacity: 0;  /* Ẩn tên phim khi hover */
+}
+
+.swiper-button-next, .swiper-button-prev {
+    background-color: rgb(204, 39, 39); 
+    border-radius: 10px;
+    padding: 0px 10px;
+    transform: translateY(10%);
+    height: 40px !important;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 15px !important; 
+    color: #fff;
+}
+
+
+@media (max-width: 767px) {
+    .image-wrapper img {
+        height: 160px;
+    }
+}
+
+/** Swiper ở trang chủ (spiwer phim mới cập nhật) **/
+#swiper-newUpdate .image-wrapper img {
+    height: 170px;
+}
+
+
+/** tooltip (hiển thị hình ảnh trong chatbot) **/
+/* Style cho liên kết phim */
+.chatbot .movie-link {
+    position: relative;
+    text-decoration: none; /* Optional: Remove underline from links */
+    display: inline-block; /* Đảm bảo link chiếm không gian đúng */
+}
+
+.chatbot .movie-image {
+    display: none !important; /* Ẩn hình ảnh mặc định */
+    position: absolute;
+    top: 100%;  /* Đặt hình ảnh ngay dưới liên kết */
+    left: 0;
+    z-index: 10; /* Đảm bảo hình ảnh ở trên các phần tử khác */
+    max-width: 200px; /* Kích thước hình ảnh */
+}
+
+.chatbot .movie-link:hover .movie-image {
+    display: block ; /* Hiển thị hình ảnh khi hover vào liên kết */
+}
+
+
+/** footer **/
+footer ul li:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
